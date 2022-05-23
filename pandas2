@@ -6,3 +6,6 @@ df=pd.read_excel('people.xlsx')
 
 df1=df['age'].min()
 
+#question 2
+
+df2=df['age'].mean()
