@@ -9,3 +9,7 @@ df1=df['age'].min()
 #question 2
 
 df2=df['age'].mean()
+
+#question 3
+
+df3=df['age'].sum()/df['age'].mean()
