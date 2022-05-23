@@ -108,3 +108,7 @@ df25=df10.loc[not df10['birth_date'].notnull()]
 #question 26
 
 df26=df10.loc[(df10['name']=='Tal')|(df10['name']=="Noa")|(df10['name']=='Shlomi')|df10['age']>=50]
+
+#question 27
+
+df27=df10.loc[((df10['gender']=="M")&(df10['age']==5)&(df10['name']=='Ido'))|((df10['name']=='Shani')|(df10['name']=='Inbar')|(df10['name']=='Talya'))]
