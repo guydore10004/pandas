@@ -1,0 +1,8 @@
+import pandas as pd
+
+df=pd.read_excel('people.xlsx')
+
+#question 1
+
+df1=df['age'].min()
+
