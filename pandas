@@ -126,3 +126,6 @@ df29[age7]=df['age']+7
 df30[details]=df['name'] + ' ' + df['gender']
 df30[age7]=df['age']+7
 
+#question 31
+
+df27.to_csv('df27.csv')
