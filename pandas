@@ -20,7 +20,7 @@ df4=df.loc[df['Age']>=19]
 
 #question 5
 
-df5=df.loc[not df['Name']=='Tal']
+df5=df.loc[df['Name']!='Tal']
 df5=df[['Gender','Age']]
 
 #question 6
@@ -78,16 +78,16 @@ df18=df10.loc[(df10['age']>=21)&(df10['age']<=23)]
 
 #question 19
 
-df19=df10.loc[not df10['name']=='noa']
+df19=df10.loc[df10['name']=='noa']
 df19=df19['birth_date']
 
 #question 20
 
-df20=df10.loc[not (df10['age']>=21)&(df10['age']<=23)]
+df20=df10.loc[(df10['age']>=21)&(df10['age']<=23)]
 
 #question 21
 
-df21=df10.loc[(not df10['age']==35)&(not df10['age']==30)]
+df21=df10.loc[(df10['age']==35)&(df10['age']==30)]
 
 #question 22
 
@@ -103,7 +103,7 @@ df24=df10.loc[(df10['gender']=='F')&(df10['age']>=6)&(df10['age']<=20)]
 
 #question 25
 
-df25=df10.loc[not df10['birth_date'].notnull()]
+df25=df10 - df10.loc[df10['birth_date'].notnull()]
 
 #question 26
 

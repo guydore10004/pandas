@@ -50,9 +50,13 @@ df10=tmpchart['age'].mean()
 
 #question 11
 
-tmpchart=df.loc[(df['age']=='M')&(not df[name]=='Tal')]
+tmpchart=df.loc[(df['age']=='M')&(df[name]!='Tal')]
 df11=tmpchart['age']
 
 #question 12
 
-df12=df[name].unique()
+df12=df['name'].unique()
+
+#question 13
+
+df13=df.groupby('name').value_counts()
