@@ -6,78 +6,105 @@ df=pd.DataFrame({
     'Age':[18,19,23,30]
 })
 
-#שאלה 2
+#question 2
 
 df2=df['Name']
 
-#שאלה 3
+#question 3
 
 df3=df.loc[df['Gender']=='F']
 
-#שאלה 4
+#question 4
 
 df4=df.loc[df['Age']>=19]
 
-#שאלה 5
+#question 5
 
 df5=df.loc[not df['Name']=='Tal']
 df5=df[['Gender','Age']]
 
-#שאלה 6
+#question 6
 
 df6=df.loc[df['Name']=='Tal'|df['Age']<20]
-#שאלה 7
+#question 7
 
 df7=df.loc[(df['Age']<20)&(df['Gender']=='F')]
 df7=df['Age']
 
-#שאלה 8
+#question 8
 
 df6.to_excel('df6.xlsx')
 
-#שאלה 9
+#question 9
 
 df7.to_csv('df7.csv')
 
-#שאלה 10
+#question 10
 
 df10=pd.read_excel('people.xlsx')
 
-#שאלה 11
+#question 11
 
-df11=df.loc[df['age']>95]
+df11=df10.loc[df10['age']>95]
 
-#שאלה 12
+#question 12
 
-df12=df.loc[df['name']=='Tal']
+df12=df10.loc[df10['name']=='Tal']
 
-#שאלה 13
+#question 13
 
 df13=df12['age']
 
-#שאלה 14
+#question 14
 
-df14=df10.loc[df['age']==22]
-df14=df[['gender','age']]
+df14=df10.loc[df10['age']==22]
+df14=df14[['gender','age']]
 
-#שאלה 15
+#question 15
 
-df15=df.loc[(df['name']=='Maya')|(df['Name']=='Tal')]
+df15=df10.loc[(df10['name']=='Maya')|(df10['Name']=='Tal')]
 
-#שאלה 16
+#question 16
 
-df16=df.loc[(df['name']=='Nadav')|df['age']=='6']
+df16=df10.loc[(df10['name']=='Nadav')|df10['age']=='6']
 
-#שאלה 17
+#question 17
 
-df17=df.loc[(df['age']==21)|(df['age']==23)]
+df17=df10.loc[(df10['age']==21)|(df10['age']==23)]
 
-#שאלה 18
+#question 18
 
-df18=df.loc[(df['age']>=21)&(df['age']<=23)]
+df18=df10.loc[(df10['age']>=21)&(df10['age']<=23)]
 
-#שאלה 19
+#question 19
 
-df19=df.loc[not df['name']=='noa']
+df19=df10.loc[not df10['name']=='noa']
 df19=df19['birth_date']
 
+#question 20
+
+df20=df10.loc[not (df10['age']>=21)&(df10['age']<=23)]
+
+#question 21
+
+df21=df10.loc[(not df10['age']==35)&(not df10['age']==30)]
+
+#question 22
+
+df22=df10.loc[(df10['gender']=='M')&(df10['age']==21)]
+
+#question 23
+
+df23=df10.loc[(df10['gender']=='M')&(df10['name']=='Tal')]
+
+#question 24
+
+df24=df10.loc[(df10['gender']=='F')&(df10['age']>=6)&(df10['age']<=20)]
+
+#question 25
+
+df25=df10.loc[not df10['birth_date'].notnull()]
+
+#question 26
+
+df26=df10.loc[(df10['name']=='Tal')|(df10['name']=="Noa")|(df10['name']=='Shlomi')|df10['age']>=50]
