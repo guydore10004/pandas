@@ -27,3 +27,8 @@ df5=df['age'].sum()/df['age'].mean()
 
 tmpchart=df.loc[df['age']>20]
 df6=df['age'].sum()/df['age'].mean()
+
+#question 7
+
+tmpchart=df.loc[(df['age']<17)|(df['age']>35)]
+df7=df['age'].sum()/df['age'].mean()
