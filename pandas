@@ -1,0 +1,83 @@
+import pandas as pd
+#שאלה 1
+df=pd.DataFrame({
+    'Name':['Noa','Ayala','Tal','Lea'],
+    'Gender':['F','F','M','F'],
+    'Age':[18,19,23,30]
+})
+
+#שאלה 2
+
+df2=df['Name']
+
+#שאלה 3
+
+df3=df.loc[df['Gender']=='F']
+
+#שאלה 4
+
+df4=df.loc[df['Age']>=19]
+
+#שאלה 5
+
+df5=df.loc[not df['Name']=='Tal']
+df5=df[['Gender','Age']]
+
+#שאלה 6
+
+df6=df.loc[df['Name']=='Tal'|df['Age']<20]
+#שאלה 7
+
+df7=df.loc[(df['Age']<20)&(df['Gender']=='F')]
+df7=df['Age']
+
+#שאלה 8
+
+df6.to_excel('df6.xlsx')
+
+#שאלה 9
+
+df7.to_csv('df7.csv')
+
+#שאלה 10
+
+df10=pd.read_excel('people.xlsx')
+
+#שאלה 11
+
+df11=df.loc[df['age']>95]
+
+#שאלה 12
+
+df12=df.loc[df['name']=='Tal']
+
+#שאלה 13
+
+df13=df12['age']
+
+#שאלה 14
+
+df14=df10.loc[df['age']==22]
+df14=df[['gender','age']]
+
+#שאלה 15
+
+df15=df.loc[(df['name']=='Maya')|(df['Name']=='Tal')]
+
+#שאלה 16
+
+df16=df.loc[(df['name']=='Nadav')|df['age']=='6']
+
+#שאלה 17
+
+df17=df.loc[(df['age']==21)|(df['age']==23)]
+
+#שאלה 18
+
+df18=df.loc[(df['age']>=21)&(df['age']<=23)]
+
+#שאלה 19
+
+df19=df.loc[not df['name']=='noa']
+df19=df19['birth_date']
+
