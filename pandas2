@@ -22,3 +22,8 @@ df4=df['age'].sum()
 
 tmpchart=df.loc[df['gender']=='M']
 df5=df['age'].sum()/df['age'].mean()
+
+#question 6
+
+tmpchart=df.loc[df['age']>20]
+df6=df['age'].sum()/df['age'].mean()
