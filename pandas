@@ -129,3 +129,7 @@ df30[age7]=df['age']+7
 #question 31
 
 df27.to_csv('df27.csv')
+
+#question 32
+
+df30.to_excel('df30.xlsx')
