@@ -112,3 +112,7 @@ df26=df10.loc[(df10['name']=='Tal')|(df10['name']=="Noa")|(df10['name']=='Shlomi
 #question 27
 
 df27=df10.loc[((df10['gender']=="M")&(df10['age']==5)&(df10['name']=='Ido'))|((df10['name']=='Shani')|(df10['name']=='Inbar')|(df10['name']=='Talya'))]
+
+#question 28
+
+df28[details]=df['name'] + ' ' + df['gender']
