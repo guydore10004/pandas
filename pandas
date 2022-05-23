@@ -116,3 +116,8 @@ df27=df10.loc[((df10['gender']=="M")&(df10['age']==5)&(df10['name']=='Ido'))|((d
 #question 28
 
 df28[details]=df['name'] + ' ' + df['gender']
+
+#question 29
+
+df29[age7]=df['age']+7
+
