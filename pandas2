@@ -40,10 +40,14 @@ df8=tmpchart['age'].sum()/tmpchart['age'].mean()
 
 #question 9
 
-tmpchart=df.loc[(df['gender']=="F")|(df['name']=='Tal')]
+tmpchart=df.loc[(df['gender']=='F')|(df['name']=='Tal')]
 df9=tmpchart['age'].sum()/tmpchart['age'].mean()
 
 #question 10
 
-tmpchart=df.loc[df['age']=="F"]
+tmpchart=df.loc[df['age']=='F']
 df9=tmpchart['age'].mean()
+
+#question 11
+
+tmpchart=df.loc[(df['age']=='M')&(not df[name]=='Tal')]
