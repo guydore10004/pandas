@@ -59,4 +59,11 @@ df12=df['name'].unique()
 
 #question 13
 
-df13=df.groupby('name').value_counts()
+tmpchart=df.groupby('name')
+df13=tmpchart['name'].value_counts()
+
+#question 14
+
+tmpchart=df.loc[df['gender']=='M']
+df14=tmpchart.groupby('name')
+df14=df14['name'].value_counts()
