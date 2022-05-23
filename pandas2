@@ -17,3 +17,8 @@ df3=df['age'].sum()/df['age'].mean()
 #question 4
 
 df4=df['age'].sum()
+
+#question 5
+
+tmpchart=df.loc[df['gender']=='M']
+df5=df['age'].sum()/df['age'].mean()
