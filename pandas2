@@ -72,3 +72,9 @@ df14=df14['name'].value_counts()
 
 df15=df.groupby('name')
 df15=df['age'].mean()
+
+#question 16
+
+tmpchart=df.loc[df['name']!='Tal']
+df16=tmpchart.groupby('gender')
+df16=df16['name'].value_counts()
