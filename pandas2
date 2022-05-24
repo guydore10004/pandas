@@ -100,3 +100,8 @@ df20=tmpchart['age'].sum()/tmpchart['age'].mean()
 
 df21=df.groupby('gender')
 df21=df21['age'].mean()
+
+#question 22
+
+df22=df.groupby('gender')
+df22=df22['age'].max()
