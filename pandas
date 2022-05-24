@@ -1,5 +1,5 @@
 import pandas as pd
-#שאלה 1
+#question 1
 df=pd.DataFrame({
     'Name':['Noa','Ayala','Tal','Lea'],
     'Gender':['F','F','M','F'],
@@ -115,16 +115,16 @@ df27=df10.loc[((df10['gender']=="M")&(df10['age']==5)&(df10['name']=='Ido'))|((d
 
 #question 28
 
-df28[details]=df['name'] + ' ' + df['gender']
+df28['details']=df['name'] + ' ' + df['gender']
 
 #question 29
 
-df29[age7]=df['age']+7
+df29['age7']=df['age']+7
 
 #question 30
 
-df30[details]=df['name'] + ' ' + df['gender']
-df30[age7]=df['age']+7
+df30['details']=df['name'] + ' ' + df['gender']
+df30['age7']=df['age']+7
 
 #question 31
 
