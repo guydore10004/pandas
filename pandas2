@@ -87,4 +87,9 @@ df17=tmpchart['age'].mean()
 #question 18
 
 tmpchart=df.loc[(df['age']>=20)&(df['age']<=30)]
-df17=tmpchart['age'].mean()
+df18=tmpchart['age'].mean()
+
+#question 19
+
+tmpchart=df.loc[(df['age']<20)|(df['age']>30)]
+df19=tmpchart['age'].mean()
