@@ -95,3 +95,8 @@ df19=tmpchart['age'].mean()
 
 tmpchart=df.loc[((df['age'] == 21) | df['age'] > 30) & (df['gender'] == 'F')]
 df20=tmpchart['age'].sum()/tmpchart['age'].mean()
+
+#question 21
+
+df21=df.groupby('gender')
+df21=df21['age'].mean()
