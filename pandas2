@@ -50,7 +50,7 @@ df10=tmpchart['age'].mean()
 
 #question 11
 
-tmpchart=df.loc[(df['age']=='M')&(df['sname']!='Tal')]
+tmpchart=df.loc[(df['age']=='M')&(df['name']!='Tal')]
 df11=tmpchart['age']
 
 #question 12
@@ -82,4 +82,9 @@ df16=df16['name'].value_counts()
 #question 17
 
 tmpchart=df.loc[(df['name']=='Ido')|(df['name']=='Shani')]
+df17=tmpchart['age'].mean()
+
+#question 18
+
+tmpchart=df.loc[(df['age']>=20)&(df['age']<=30)]
 df17=tmpchart['age'].mean()
