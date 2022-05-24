@@ -105,3 +105,8 @@ df21=df21['age'].mean()
 
 df22=df.groupby('gender')
 df22=df22['age'].max()
+
+#question 23
+
+df23=df['birth_date'].value_counts()
+
