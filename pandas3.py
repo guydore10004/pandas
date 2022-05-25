@@ -115,3 +115,6 @@ df20=df20['Owner_ID'].count()
 
 df21=df3.sort_values(ascending=False)
 
+#question 22
+
+df22=df21.head(5)
