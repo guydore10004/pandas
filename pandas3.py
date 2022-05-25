@@ -135,3 +135,8 @@ df25=df3.sort_values(by='PersonAge')
 df25=df25.head()
 df25=df25['PersonName']
 
+#question 26
+
+df26=df21.head()
+df26=df26['AnimalName']
+
