@@ -17,13 +17,13 @@ df2 = df_animals.rename(columns={'ID' : 'AnimalID' , 'Name' : 'AnimalName' , 'Ag
 #question 3
 
 
-df3 = df1.merge(df2, left_on='ID' , right_on='Owner_ID')
+df3 = df1.merge(df2, left_on='PersonID' , right_on='Owner_ID')
 
 
 
 #question 4
 
-df4 = df_people.merge(df_animals, left_on='ID' , right_on='Owner_ID' , how='left')
+df4 = df1.merge(df2, left_on='PersonID' , right_on='Owner_ID' , how='left')
 
 
 #question 5
@@ -91,3 +91,13 @@ df15 = df15[df15 > 1]
 
 df16=df3.loc[df3['PersonID']==df3['AnimalID']]
 df16=df3['PersonName']
+
+#question 17
+
+#animal gender missing in the chart
+
+#question 18
+
+df18=df1.merge(df2, left_on='Owner_ID' , right_on='PersonID' , how='left')
+df18=df18.loc[~(df18['Type'].notnull())]
+df18=df18[['AnimalName','AnimalID']]
