@@ -17,7 +17,7 @@ df2 = df_animals.rename(columns={'ID' : 'AnimalID' , 'Name' : 'AnimalName' , 'Ag
 #question 3
 
 
-df3 = df_people.merge(df_animals, left_on='ID' , right_on='Owner_ID')
+df3 = df1.merge(df2, left_on='ID' , right_on='Owner_ID')
 
 
 
@@ -28,24 +28,24 @@ df4 = df_people.merge(df_animals, left_on='ID' , right_on='Owner_ID' , how='left
 
 #question 5
 
-df5 = df3['Name_x'].unique()
+df5 = df3['PersonName'].unique()
 
 
 
 #question 6
 
-df6 = df3.loc[(df3['Name_x'] == 'Ido')]
+df6 = df3.loc[(df3['PersonName'] == 'Ido')]
 
 
 
 #question 7
 
-df7 = df3.loc[(df3['Age_x'] > 20)]
+df7 = df3.loc[(df3['PersonAge'] > 20)]
 
 
 #question 8
 
-df8 = df3.loc[(df3['Age_x'] >= 30)]
+df8 = df3.loc[(df3['PersonAge'] >= 30)]
 
 
 #question 9
@@ -67,22 +67,27 @@ df11 = df3.loc[(df3['Gender'] == 'F') & (df3['Color'] == 'white')]
 
 #question 12
 
-df12 = df3.loc[(df3['Gender'] == 'M') & (df3['Type'] == 'dog') & (df3['Age_x'] >= 21)]
+df12 = df3.loc[(df3['Gender'] == 'M') & (df3['Type'] == 'dog') & (df3['PersonAge'] >= 21)]
 df12 = df12['Color'].unique()
 
 
 #question 13
 
-df13 = df10['Name_x']
+df13 = df10['PersonName']
 
 
 #question 14
 
-df14 = df3.loc[(df3['Gender'] == 'F') & (df3['Color'] != 'black') & (df3['Age_y'] >= 3)]
+df14 = df3.loc[(df3['Gender'] == 'F') & (df3['Color'] != 'black') & (df3['AnimalAge'] >= 3)]
 
 
 #question 15
 
-df15 = df3.loc[(df3['Name_y'] == df3['Name_y'])]
-df15 = df15.Name_y.value_counts()
+df15 = df3.loc[(df3['AnimalName'] == df3['AnimalName'])]
+df15 = df15.AnimalName.value_counts()
 df15 = df15[df15 > 1]
+
+#question 16
+
+df16=df3.loc[df3['PersonID']==df3['AnimalID']]
+df16=df3['PersonName']
