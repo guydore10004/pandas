@@ -110,3 +110,8 @@ df19=df3['Owner_ID'].value_counts()
 
 df20=df3.groupby('Gender')
 df20=df20['Owner_ID'].count()
+
+#question 21
+
+df21=df3.sort_values(ascending=False)
+
