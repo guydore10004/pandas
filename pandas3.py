@@ -113,7 +113,7 @@ df20=df20['Owner_ID'].count()
 
 #question 21
 
-df21=df3['AnimalAge'].sort_values(ascending=False)
+df21=df3.sort_values(by='AnimalAge', ascending=False)
 
 #question 22
 
@@ -123,3 +123,8 @@ df22=df21.head(5)
 
 df23=df21.loc[~(df21['AnimalName']=='Ido')]
 df23=df23.head(12)
+
+#question 24
+
+df24=df3.sort_values(by='AnimalAge')
+df24=df24.loc[df24['Color']=='white']
