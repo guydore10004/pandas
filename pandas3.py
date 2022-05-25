@@ -101,3 +101,12 @@ df16=df3['PersonName']
 df18=df1.merge(df2, left_on='Owner_ID' , right_on='PersonID' , how='left')
 df18=df18.loc[~(df18['Type'].notnull())]
 df18=df18[['AnimalName','AnimalID']]
+
+#question 19
+
+df19=df3['Owner_ID'].value_counts()
+
+#question 20
+
+df20=df3.groupby('Gender')
+df20=df20['Owner_ID'].count()
