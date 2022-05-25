@@ -143,6 +143,11 @@ df26=df26['AnimalName']
 #question 27
 
 df27=df21.loc[~(df21['PersonName']=='Ido')]
-df23=df23.head(12)
+df27=df27.head(12)
+
+#question 28
+
+df28=df21.head(3)
+df28=df28['PersonName']
 
 
