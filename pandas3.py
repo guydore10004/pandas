@@ -128,3 +128,10 @@ df23=df23.head(12)
 
 df24=df3.sort_values(by='AnimalAge')
 df24=df24.loc[df24['Color']=='white']
+
+#question 25
+
+df25=df3.sort_values(by='PersonAge')
+df25=df25.head()
+df25=df25['PersonName']
+
