@@ -150,4 +150,14 @@ df27=df27.head(12)
 df28=df21.head(3)
 df28=df28['PersonName']
 
+#question 29
+
+df29=df3.groupby('PersonID')
+df29=df29['AnimalAge'].max()
+
+#question 30
+
+df30 = df3.sort_values(by=['Age_y'], ascending=False)
+df30 = df30.groupby('Type').mean().head(1)
+df30 = df30.reset_index()['Type'][0]
 
