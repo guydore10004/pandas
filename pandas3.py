@@ -131,7 +131,7 @@ df24=df24.loc[df24['Color']=='white']
 
 #question 25
 
-df25=df3.sort_values(by='PersonAge')
+df25=df3.sort_values(by='PersonAge',ascending=False)
 df25=df25.head()
 df25=df25['PersonName']
 
@@ -139,4 +139,10 @@ df25=df25['PersonName']
 
 df26=df21.head()
 df26=df26['AnimalName']
+
+#question 27
+
+df27=df21.loc[~(df21['PersonName']=='Ido')]
+df23=df23.head(12)
+
 
